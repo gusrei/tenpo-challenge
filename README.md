@@ -1,4 +1,4 @@
-# Tenpo Challenge API
+d# Tenpo Challenge API
 
 
 * [Overview](#overview)
@@ -46,10 +46,10 @@ app:
 ```
 Para ejecutar la aplicación se debe descargar la  docker-compose image:
 ```
-docker pull gusrei/tenpo-challenge
+docker pull gusrei/tenpo-challenge:v1.1
 ```
 
  ```
-  docker-compose up --build
+  docker-compose up 
  ```
 
