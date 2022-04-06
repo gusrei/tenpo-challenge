@@ -29,25 +29,14 @@ La aplicación está desarrollada utilizando Java, Spring, Postgres y Redis
 ## Docker
 
 La app está desarrollada para correr sobre un contenedor Docker. 
-En docker-compose.yml se pueden configurar las siguientes properties:
+El docker-compose.yml en la raíz del proyecto esta preparado para orquestar un docker network con la imagen 
+descargada desde el docker-hub.
+Para ejecutar la aplicación se debe descargar la  docker-compose image
 
 ```
-db:
-  - POSTGRES_USER=compose-postgres
-  - POSTGRES_PASSWORD=compose-postgres
+docker pull gusrei/tenpo:v0
 ```
-```
-app:
-    ports:
-      - 8080:8080
-    environment:
-      - SPRING_DATASOURCE_USERNAME=compose-postgres
-      - SPRING_DATASOURCE_PASSWORD=compose-postgres
-```
-Para ejecutar la aplicación se debe descargar la  docker-compose image:
-```
-docker pull gusrei/tenpo-challenge:v1.1
-```
+y luego en un directorio que contenga el docker-compose.yml ejecutar
 
  ```
   docker-compose up 
